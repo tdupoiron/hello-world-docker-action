@@ -8,13 +8,7 @@ jobs:
   hello-world-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Docker Login
-        uses: docker/login-action@v1
-        with:
-          registry: nexus.dupoiron.com
-          username: ${{ secrets.NEXUS_USERNAME }}
-          password: ${{ secrets.NEXUS_PASSWORD }}
       - name: Hello World Docker
-        uses: docker://nexus.dupoiron.com/hello-world:1.0.0-airbus
+        uses: docker://${{ secrets.NEXUS_USERNAME }}:${{ secrets.NEXUS_PASSWORD }}@nexus.dupoiron.com/hello-world:1.0.0-airbus
         with:
           who-to-greet: 'John Doe'
