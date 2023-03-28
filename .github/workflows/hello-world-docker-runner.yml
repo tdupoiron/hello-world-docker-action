@@ -12,7 +12,7 @@ jobs:
       credentials:
         username: ${{  secrets.NEXUS_USERNAME }}
         password: ${{  secrets.NEXUS_PASSWORD }}
-      options: --entrypoint /bin/sh
+      options: --entrypoint /bin/sh -it
 
     steps:
       - name: List files
