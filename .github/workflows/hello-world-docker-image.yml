@@ -11,6 +11,6 @@ jobs:
       - name: Docker Login
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }} nexus.dupoiron.com
       - name: Hello World Docker
-        uses: docker://nexus.dupoiron.com/hello-world:1.0.0-airbus
+        uses: docker://user:password@nexus.dupoiron.com/hello-world:1.0.0-airbus
         with:
-          who-to-greet: 'John Doe'
+          who-to-greet: 'Simple user'
