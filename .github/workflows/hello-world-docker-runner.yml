@@ -7,10 +7,12 @@ on:
 jobs:
   hello-world-job:
     runs-on: ubuntu-latest
-    container: nexus.dupoiron.com/openjdk:17-jdk-airbus
+    container:
+      image: nexus.dupoiron.com/openjdk:17-jdk-airbus
       credentials:
         username: ${{  secrets.NEXUS_USERNAME }}
         password: ${{  secrets.NEXUS_PASSWORD }}
+      options: --entrypoint /bin/sh
 
     steps:
       - name: List files
