@@ -1,1 +1,14 @@
+name: "Hello World Docker Action"
 
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World Docker Action
+        uses: ./
+        with:
+          who-to-greet: 'John Doe'
