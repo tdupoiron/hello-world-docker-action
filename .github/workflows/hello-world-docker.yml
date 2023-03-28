@@ -8,7 +8,9 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello World Docker Action
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Hello World Docker
         uses: ./
         with:
           who-to-greet: 'John Doe'
