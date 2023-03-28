@@ -1,4 +1,4 @@
-name: "Hello World Docker Action"
+name: "Hello World Docker Action from private image"
 
 on:
   push:
@@ -11,6 +11,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Hello World Docker
-        uses: ./
+        uses: docker://nexus.dupoiron.com/hello-world:1.0.0-airbus
         with:
           who-to-greet: 'John Doe'
