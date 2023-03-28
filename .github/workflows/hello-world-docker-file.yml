@@ -1,11 +1,11 @@
-name: "Hello World Docker Action from Dockerfile"
+name: "Docker Action from Dockerfile"
 
 on:
   push:
   workflow_dispatch:
 
 jobs:
-  docker:
+  hello-world-job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
