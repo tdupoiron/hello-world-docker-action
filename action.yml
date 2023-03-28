@@ -1,0 +1,8 @@
+name: "Hello World Docker Action"
+
+description: "This is an example of a Docker Action"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args: ["hello", "world"]
