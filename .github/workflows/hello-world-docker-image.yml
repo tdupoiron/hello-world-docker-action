@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Docker Login
-        run: docker login -u ${{ secrets.NEXUS_USERNAME }} -p ${{ secrets.NEXUS_USERNAME }} nexus.dupoiron.com
+        run: docker login -u ${{ secrets.NEXUS_USERNAME }} -p ${{ secrets.NEXUS_PASSWORD }} nexus.dupoiron.com
       - name: Hello World Docker
         uses: docker://user:password@nexus.dupoiron.com/hello-world:1.0.0-airbus
         with:

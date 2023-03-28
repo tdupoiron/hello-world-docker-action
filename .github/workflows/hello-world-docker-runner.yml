@@ -11,7 +11,7 @@ jobs:
       image: nexus.dupoiron.com/hello-world:1.0.0-airbus
       credentials:
         username: ${{  secrets.NEXUS_USERNAME }}
-        password: ${{  secrets.NEXUS_USERNAME }}
+        password: ${{  secrets.NEXUS_PASSWORD }}
 
     steps:
       - name: List files
