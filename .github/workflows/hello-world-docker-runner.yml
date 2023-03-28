@@ -8,7 +8,7 @@ jobs:
   hello-world-job:
     runs-on: ubuntu-latest
     container:
-      image: nexus.dupoiron.com/hello-world:1.0.0-airbus
+      image: nexus.dupoiron.com/openjdk:17-jdk-airbus
       credentials:
         username: ${{  secrets.NEXUS_USERNAME }}
         password: ${{  secrets.NEXUS_PASSWORD }}
