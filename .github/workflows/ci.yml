@@ -8,8 +8,8 @@ jobs:
   container-test-job:
     runs-on: self-hosted
     container:
-      image: openjdk:17-jdk-slim
-      
+      image: nexus.dupoiron.com/openjdk:17-jdk-airbus
+
     steps:
       - name: Check for dockerenv file
         run: ls -al
