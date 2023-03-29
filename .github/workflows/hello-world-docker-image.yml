@@ -8,8 +8,6 @@ jobs:
   hello-world-docker-image-job:
     runs-on: self-hosted
     steps:
-      - name: Docker Login
-        run: docker login -u ${{ secrets.NEXUS_USERNAME }} -p ${{ secrets.NEXUS_PASSWORD }} nexus.dupoiron.com
       - name: Hello World Docker
         uses: docker://nexus.dupoiron.com/hello-world:1.0.0-airbus
         with:
