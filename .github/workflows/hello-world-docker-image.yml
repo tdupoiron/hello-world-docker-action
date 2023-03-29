@@ -6,14 +6,11 @@ on:
 
 jobs:
   hello-world-job:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Docker Login
         run: docker login -u ${{ secrets.NEXUS_USERNAME }} -p ${{ secrets.NEXUS_PASSWORD }} nexus.dupoiron.com
       - name: Hello World Docker
         uses: docker://admin:password@nexus.dupoiron.com/hello-world:1.0.0-airbus
-        credentials:
-          username: ${{ secrets.NEXUS_USERNAME }}
-          password: ${{ secrets.NEXUS_PASSWORD }}
         with:
           who-to-greet: 'Simple user'
