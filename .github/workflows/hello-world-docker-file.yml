@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  hello-world-job:
+  hello-world-docker-file-job:
     runs-on: self-hosted
     steps:
       - name: Checkout
