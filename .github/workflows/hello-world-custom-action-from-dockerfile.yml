@@ -1,4 +1,4 @@
-name: "Docker Action from Dockerfile"
+name: "Custom Action from Dockerfile"
 
 on:
   push:
@@ -10,7 +10,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        
       - name: Hello World Docker
-        uses: ./
+        uses: ./action-dockerfile
         with:
           who-to-greet: 'John Doe'
