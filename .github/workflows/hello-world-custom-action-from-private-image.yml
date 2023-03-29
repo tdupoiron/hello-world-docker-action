@@ -1,4 +1,4 @@
-name: "Custom Action from Dockerfile"
+name: "Custom Action from private image"
 
 on:
   push:

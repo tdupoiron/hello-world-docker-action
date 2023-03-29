@@ -1,4 +1,4 @@
-name: "Docker Runner from private image"
+name: "Workflow runner from private image"
 
 on:
   push:
