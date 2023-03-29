@@ -4,9 +4,9 @@ on:
     branches: [ main ]
 jobs:
   container-test-job:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     container:
       image: openjdk:17-jdk-slim
     steps:
       - name: Check for dockerenv file
-        run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
+        run: ls /.dockerenv
