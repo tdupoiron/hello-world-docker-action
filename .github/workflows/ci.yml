@@ -7,11 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: openjdk:17-jdk-slim
-      ports:
-        - 80
-      volumes:
-        - my_docker_volume:/volume_mount
-      options: --cpus 1
     steps:
       - name: Check for dockerenv file
         run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
