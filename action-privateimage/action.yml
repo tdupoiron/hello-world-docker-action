@@ -12,8 +12,8 @@ outputs:
 runs:
   using: 'docker'
   image: 'docker://nexus.dupoiron.com/hello-world:1.0.0-airbus'
-  credentials:
-    username: ${{  secrets.NEXUS_USERNAME }}
-    password: ${{  secrets.NEXUS_PASSWORD }}
+  #credentials:
+  #  username: ${{  secrets.NEXUS_USERNAME }}
+  #  password: ${{  secrets.NEXUS_PASSWORD }}
   args:
     - ${{ inputs.who-to-greet }}
