@@ -6,9 +6,7 @@ jobs:
   container-test-job:
     runs-on: ubuntu-latest
     container:
-      image: node:14.16
-      env:
-        NODE_ENV: development
+      image: openjdk:17-jdk-slim
       ports:
         - 80
       volumes:
